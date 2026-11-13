@@ -1,115 +1,110 @@
-# Growfinix Internship – Task 4
-## IPL Sports Data Analysis using Python
+# Growfinix Internship – Task 2
+## CLI Log Parser for Tour Enquiries
 
 ### Project Overview
-This project analyzes historical Indian Premier League (IPL) cricket match data using Python. It uses Pandas for data analysis and Matplotlib for data visualization.
 
-The project explores team performance, win rates, Kolkata Knight Riders (KKR) performance, and IPL toss decisions.
+This project is developed as part of the Python Development Internship at Growfinix Technology.
+
+The CLI Log Parser is a Python application that reads tour enquiry text files and extracts important customer information, including customer names, email addresses, and travel destinations.
+
+It uses Regular Expressions (Regex) to identify and extract information from unstructured text.
 
 ### Objectives
-- Analyze historical IPL match data.
-- Calculate matches played and matches won by each team.
-- Calculate team win percentages.
-- Analyze Kolkata Knight Riders' performance.
-- Examine toss decisions and match outcomes.
-- Generate visualizations using Matplotlib.
+
+- Read customer tour enquiries from a text file.
+- Extract customer names.
+- Identify and extract email addresses.
+- Extract travel destinations.
+- Display structured information in the terminal.
+- Process files through a Command Line Interface.
 
 ### Technologies Used
+
 - Python
-- Pandas
-- Matplotlib
-- CSV Dataset
+- Regular Expressions (re)
+- Argparse
 - Visual Studio Code
 
 ### Project Structure
 
 ```text
-Growfinix-Task4-IPL-Analysis/
+Growfinix-Task2-CLI-Log-Parser/
 │
 ├── main.py
-├── matches.csv
-├── outputs/
-│   ├── team_performance.csv
-│   ├── toss_analysis.csv
-│   ├── team_wins.png
-│   ├── kkr_season_wins.png
-│   └── toss_decisions.png
-│
+├── tour_enquiries.txt
 └── README.md
 ```
 
-### Features
+### Key Features
 
-**1. IPL Dataset Analysis**
-- Reads historical IPL match data.
-- Displays dataset information and records.
+**1. Customer Name Extraction**
+- Identifies customer names from enquiry messages.
 
-**2. Team Performance Analysis**
-- Calculates total matches played.
-- Calculates total matches won.
-- Calculates team win percentages.
+**2. Email Extraction**
+- Uses Regex patterns to identify email addresses.
 
-**3. KKR Performance Analysis**
-- Filters Kolkata Knight Riders match records.
-- Calculates total KKR wins.
-- Analyzes KKR wins by season.
+**3. Destination Extraction**
+- Extracts travel destinations from customer enquiries.
 
-**4. Toss Decision Analysis**
-- Analyzes bat and field decisions.
-- Calculates how often the toss-winning team also won the match.
+**4. File Processing**
+- Reads multiple enquiries from a text file.
+- Processes each enquiry separately.
 
-**5. Data Visualization**
-- IPL team wins bar chart.
-- KKR season-wise wins bar chart.
-- Toss decision pie chart.
+**5. Command Line Interface**
+- Accepts the input filename through command-line arguments.
+- Uses argparse for command-line input.
 
 ### Installation
 
-Install Python and the required libraries.
+Install Python 3 on your system.
 
-```bash
-pip install pandas matplotlib
-```
+No external Python libraries are required because this project uses Python's built-in modules.
 
 ### How to Run
 
 1. Download or clone this repository.
-2. Place the IPL dataset file named `matches.csv` in the project folder.
-3. Open the project in Visual Studio Code.
-4. Open the terminal.
-5. Run the following command:
+2. Open the project folder in Visual Studio Code.
+3. Open the terminal.
+4. Run the following command:
 
 ```bash
-python main.py
+python main.py tour_enquiries.txt
 ```
 
-### Output
+### Sample Output
 
-The program generates:
-- Team performance CSV report.
-- Toss analysis CSV report.
-- IPL team wins chart.
-- KKR season-wise wins chart.
-- Toss decision distribution chart.
+```text
+GROWFINIX - TOUR ENQUIRY LOG PARSER
 
-All generated files are saved inside the `outputs` folder.
+Enquiry 1
+
+Name        : Arun Kumar
+Email       : arun@gmail.com
+Destination : Ooty
+
+TOTAL ENQUIRIES PROCESSED: 10
+```
 
 ### Learning Outcomes
-- Python programming fundamentals.
-- Data cleaning and manipulation using Pandas.
-- Data analysis using CSV files.
-- Data visualization using Matplotlib.
-- Working with real-world sports datasets.
+
+- Understanding Python Regular Expressions.
+- Working with text files.
+- Extracting structured information from unstructured text.
+- Using Python functions.
+- Implementing command-line arguments with argparse.
+- Debugging Python applications.
 
 ### Internship Information
 
-**Organization:** Growfinix Technology  
-**Internship Domain:** Python Development  
-**Project:** Task 4 – Sports Data Analysis with Pandas
+**Organization:** Growfinix Technology
+
+**Domain:** Python Development
+
+**Task:** Task 2 – CLI Log Parser for Tour Enquiries
 
 ### Conclusion
 
-This project demonstrates how Python can be used to analyze historical IPL cricket data, identify team performance trends, and present meaningful insights through visualizations.
+This project demonstrates how Python can automate the extraction of customer information from unstructured tour enquiry messages using Regular Expressions and command-line processing.
 
 ---
 
